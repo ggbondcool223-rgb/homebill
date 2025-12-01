@@ -4,7 +4,9 @@ import 'package:get/get.dart';
 
 import '../home_ledger_translate/home_ledger_translate_logic.dart';
 
-class TimeOutReload extends GetView<HomeLedgerTranslateLogic> {
+class HomeLedgerStatisticsTouch extends GetView<HomeLedgerTranslateLogic> {
+  const HomeLedgerStatisticsTouch({super.key});
+
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +25,7 @@ class TimeOutReload extends GetView<HomeLedgerTranslateLogic> {
         body: SafeArea(
           child: InAppWebView(
             initialUrlRequest: URLRequest(
-              url: WebUri.uri(Uri.parse(controller.ohpmis.value)),
+              url: WebUri.uri(Uri.parse(controller.npztr.value)),
             ),
             initialSettings: InAppWebViewSettings(
               cacheEnabled: true,

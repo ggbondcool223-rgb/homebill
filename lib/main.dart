@@ -8,13 +8,21 @@ import 'package:home_ledger/pages/home_ledger_expense_categories/home_ledger_exp
 import 'package:home_ledger/pages/home_ledger_expense_categories/home_ledger_expense_categories_view.dart';
 import 'package:home_ledger/pages/home_ledger_income_categories/home_ledger_income_categories_binding.dart';
 import 'package:home_ledger/pages/home_ledger_income_categories/home_ledger_income_categories_view.dart';
+import 'package:home_ledger/pages/home_ledger_statistics/home_ledger_statistics_touch.dart';
 import 'package:home_ledger/pages/home_ledger_tab/home_ledger_tab_binding.dart';
 import 'package:home_ledger/pages/home_ledger_tab/home_ledger_tab_view.dart';
+import 'package:home_ledger/pages/home_ledger_translate/home_ledger_translate_binding.dart';
+import 'package:home_ledger/pages/home_ledger_translate/home_ledger_translate_view.dart';
 
 Color primaryColor = const Color(0xFF3B82F6);
 Color bgColor = const Color(0xFFF5F5F7);
 
 List<GetPage<dynamic>> HomeBill = [
+  GetPage(
+    name: '/',
+    page: () => const HomeLedgerTranslateView(),
+    binding: HomeLedgerTranslateBinding(),
+  ),
   GetPage(
     name: '/home_ledger_tab',
     page: () => const HomeLedgerTabView(),
@@ -24,6 +32,10 @@ List<GetPage<dynamic>> HomeBill = [
     name: '/home_ledger_add_record',
     page: () => const HomeLedgerAddRecordView(),
     binding: HomeLedgerAddRecordBinding(),
+  ),
+  GetPage(
+    name: '/home_ledger_touch',
+    page: () => const HomeLedgerStatisticsTouch(),
   ),
   GetPage(
     name: '/home_ledger_income_categories',
@@ -61,7 +73,7 @@ class MyApp extends StatelessWidget {
         return GetMaterialApp(
           debugShowCheckedModeBanner: false,
           getPages: HomeBill,
-          initialRoute: '/home_ledger_tab',
+          initialRoute: '/',
           theme: ThemeData(
             useMaterial3: true,
             primaryColor: primaryColor,

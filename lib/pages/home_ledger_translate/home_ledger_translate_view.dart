@@ -11,7 +11,7 @@ class HomeLedgerTranslateView extends GetView<HomeLedgerTranslateLogic> {
     return Scaffold(
       body: Center(
         child: Obx(
-          () => controller.snwz.value
+          () => controller.qlpszvaf.value
               ? const CircularProgressIndicator(color: Colors.blueAccent)
               : buildError(),
         ),
@@ -26,7 +26,7 @@ class HomeLedgerTranslateView extends GetView<HomeLedgerTranslateLogic> {
         children: [
           IconButton(
             onPressed: () {
-              controller.oknbgfd();
+              controller.qcpbda();
             },
             icon: const Icon(
               Icons.restart_alt,
